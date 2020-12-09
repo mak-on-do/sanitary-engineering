@@ -40,8 +40,28 @@ h6 {
     margin: 0;
 }
 
+h1 {
+    font-weight: 200;
+    font-size: 104px;
+    line-height: 104px;
+    letter-spacing: -0.03em;
+}
+
+h2 {
+    font-weight: 300;
+    font-size: 72px;
+    line-height: 88px;
+    letter-spacing: -0.02em;
+}
+
 p {
     margin: 0;
+}
+
+svg path {
+    stroke: inherit;
+    stroke-width: inherit;
+    fill: inherit;
 }
 
 body {
@@ -57,4 +77,147 @@ body {
     max-width: 1920px;
     margin: 0 auto;
     padding: 0 156px;
+}
+
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.31);
+    backdrop-filter: blur(19px);
+    z-index: 5;
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 18px 0;
+    }
+    &__left,
+    &__right,
+    &__menu-list {
+        display: flex;
+        justify-content: space-between;
+    }
+    .logo {
+        margin: 18px 99px 17px 0;
+    }
+    &__menu-item {
+        margin: 36px 0;
+        &+& {
+            margin-left: 56px;
+        }
+        &.active {
+            position: relative;
+            &::after {
+                content: '';
+                position: absolute;
+                width: 28px;
+                height: 2px;
+                left: 0;
+                bottom: -8px;
+                background: #FFFFFF;
+            }
+        }
+    }
+    &__contacts {
+        margin-right: 71px;
+        a {
+            display: block;
+        }
+        &-tel {
+            font-size: 24px;
+            line-height: 36px;
+        }
+    }
+}
+
+.call-btn {
+    background: transparent;
+    border: 2px solid #fff;
+    padding: 18px 60px;
+    color: #fff;
+    cursor: pointer;
+    outline: none;
+    transition: all .3s;
+    &:hover {
+        background: #fff;
+        color: #000;
+    }
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 5;
+    background: #333;
+    &__inner {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    &__left {
+        display: flex;
+        align-items: center;
+        margin-right: 140px;
+    }
+    &__logo-box {
+        padding: 25px 0 22px;
+        margin-right: 75px;
+        a {
+            display: block;
+        }
+        & .logo {
+            margin-bottom: 29px;
+        }
+    }
+    .confidentiality {
+        color: #828282;
+    }
+    &__center {
+        margin-right: 100px;
+    }
+    &__link-tel {
+        padding-left: 37px;
+        margin-right: 75px;
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            background-image: url('../images/phone-call.svg');
+            width: 23px;
+            height: 23px;
+            left: 0;
+            top: 2px;
+            svg {
+                stroke: #626262;
+                fill: none;
+            }
+        }
+    }
+    &__link-email {
+        padding-left: 37px;
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            background-image: url('../images/mail.svg');
+            width: 21px;
+            height: 17px;
+            left: 0;
+            top: 6px;
+            svg {
+                stroke: #626262;
+                fill: none;
+            }
+        }
+    }
+    &__link-vk {
+        margin-right: 30px;
+    }
+    &__link-insta {
+        margin-right: 64px;
+    }
 }
