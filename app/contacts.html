@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <title>SUNTECHNICA | Вся сантехника в одном месте</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/libs.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+
+                <div class="header__left">
+                    <a class="logo" href="#">
+                        <img src="images/logo.svg" alt="">
+                    </a>
+                    <div class="menu-btn">
+                        <div class="menu-btn__line"></div>
+                        <div class="menu-btn__line"></div>
+                        <div class="menu-btn__line"></div>
+                    </div>
+                    <nav class="header__menu">
+                        <ul class="header__menu-list">
+                            <li class="header__menu-item">
+                                <a href="#">Главная</a>
+                            </li>
+                            <li class="header__menu-item">
+                                <a href="#">Каталог</a>
+                            </li>
+                            <li class="header__menu-item">
+                                <a href="#">Наши партнеры</a>
+                            </li>
+                            <li class="header__menu-item">
+                                <a href="#">О нас</a>
+                            </li>
+                            <li class="header__menu-item active">
+                                <a href="#">Контакты</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="header__right">
+                    <div class="header__contacts">
+                        <a class="header__contacts-tel" href="tel:79876543210">+7 987 654 32 10</a>
+                        <a class="header__contacts-email" href="mailto:info.sunchechtics@mail.ru">info.sunchechtics@mail.ru</a>
+                    </div>
+                    <a class="call-btn popup-modal" href="#call-me-modal">Заказать звонок</a>
+                </div>
+
+            </div>
+        </div>
+
+    </header>
+
+    <div class="wrapper">
+
+        <section class="contacts">
+            <div class="container">
+                <div class="contacts__inner">
+
+                    <h1 class="contacts__title">Контакты</h1>
+                    <div class="contacts__wrapper">
+
+                        <div class="contacts-box">
+                            <div class="contacts-box__contacts">
+                                <a class="contacts-box__item contacts-box__link-tel" href="tel:+79279793279">+7 (927) 979-32-79</a>
+                                <a class="contacts-box__item contacts-box__link-email" href="mailto:suntechnica@mail.ru">suntechnica@mail.ru</a>
+                                <p class="contacts-box__item contacts-box__adres">бульвар Горшкова 14, Рузаевка</p>
+                            </div>
+                            <div class="contacts-box__social">
+                                <div class="contacts-box__social-title">
+                                    Мы в соцсетях
+                                </div>
+                                <a class="contacts-box__link-vk" href="#">
+                                    vk.com/vodianoiruz
+                                </a>
+                                <a class="contacts-box__link-insta" href="#">
+                                     @vodianoiruz
+                                </a>
+
+                            </div>
+                        </div>
+                        <div class="contacts__form">
+                            <h3 class="contacts__form-title">
+                                Вы всегда можете связаться с нами по любым вопросам
+                            </h3>
+                            <form class="contact-us__form" action="" method="">
+                                <div class="contact-us__form-box">
+                                    <label for="">Ваше имя</label>
+                                    <input class="contact-us__input-name" type="text" name="name" placeholder="_ _ _ _ _ _ _ _ _ _ _ _" required>
+                                </div>
+                                <div class="contact-us__form-box">
+                                    <label for="">Номер телефона</label>
+                                    <input class="contact-us__input-tel" type="tel" name="tel" placeholder="+7 XXX XXX XX XX" required>
+                                </div>
+                                <div class="contact-us__checkbox">
+                                    <input class="contact-us__consent form-style" type="checkbox" name="consent" required>
+                                    <label for="">Я даю согласие на обработку персональных данных</label>
+                                </div>
+                                <a class="call-btn popup-modal" href="#success-modal">Заказать звонок</a>
+                            </form>
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <footer class="footer footer__contacts">
+        <div class="container">
+            <div class="footer__inner">
+
+                <div class="footer__left">
+                    <div class="footer__logo-box">
+                        <a class="logo" href="#">
+                            <img src="images/logo.svg" alt="">
+                        </a>
+                        <a class="developer-logo" href="https://meven.ru/">
+                            <img src="images/developer-logo.svg" alt="">
+                        </a>
+                    </div>
+                    <a class="confidentiality" href="#">Политика конфиденциальности</a>
+                </div>
+                <div class="footer__center">
+                    <a class="footer__link-tel" href="tel:+79279793279">+7 (927) 979-32-79</a>
+                    <a class="footer__link-email" href="mailto:suntechnica@mail.ru">suntechnica@mail.ru</a>
+                </div>
+                <div class="footer__right">
+                    <a class="footer__link-vk" href="#">
+                        <img src="images/icon-vk.svg" alt="">
+                    </a>
+                    <a class="footer__link-insta" href="#">
+                        <img src="images/icon-insta.svg" alt="">
+                    </a>
+                </div>
+                <a class="call-btn popup-modal" href="#call-me-modal">Заказать звонок</a>
+
+            </div>
+        </div>
+    </footer>
+
+
+    <div id="call-me-modal" class="mfp-hide white-popup-block">
+
+        <a class="close-modal popup-modal-dismiss" href="#"></a>
+        <h2 class="contact-us__title">
+            Свяжитесь с нами
+        </h2>
+        <p class="contact-us__text">
+            Оставьте свои контактные данные, и мы свяжемся с вами как можно скорее
+        </p>
+        <div class="contact-us__content">
+            <form class="contact-us__form" action="" method="">
+                <div class="contact-us__form-box">
+                    <label for="">Ваше имя</label>
+                    <input id="username" class="contact-us__input-name" type="text" name="name" placeholder="Константин" required>
+                </div>
+                <div class="contact-us__form-box">
+                    <label for="">Номер телефона</label>
+                    <input class="contact-us__input-tel" type="tel" name="tel" placeholder="+7 XXX XXX XX XX" required>
+                </div>
+                <div class="contact-us__checkbox">
+                    <input class="contact-us__consent form-style" type="checkbox" name="consent" required>
+                    <label for="">Я даю согласие на обработку персональных данных</label>
+                </div>
+                <a id="modal-close" class="call-btn popup-modal-dismiss popup-modal" href="#success-modal">Заказать звонок</a>
+            </form>
+
+        </div>
+
+    </div>
+
+    <div id="success-modal" class="mfp-hide white-popup-block">
+        <a class="close-modal popup-modal-dismiss" href="#"></a>
+        <h3 class="success-modal__title">
+            Вы успешно отправили заявку
+        </h3>
+        <p class=success-modal__text ">
+                Наш менеджер свяжется с вами как можно скорее
+            </p>
+            <a class="call-btn popup-modal-dismiss " href="# ">Закрыть</a>
+        </div>
+
+
+    <script src="js/libs.min.js "></script>
+    <script src="js/main.min.js "></script>
+</body>
+
+</html>

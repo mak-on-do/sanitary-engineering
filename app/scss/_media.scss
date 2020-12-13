@@ -13,11 +13,33 @@
     .call-btn {
         padding: 18px 50px;
     }
+    .footer .call-btn {
+        min-width: 233px;
+    }
+    .partners {
+        &__item-img {
+            img {
+                max-width: 300px;
+            }
+        }
+    }
 }
 
 @media (max-width: 1600px) {
     .container {
         padding: 0 100px;
+    }
+    .contact-us__form {
+        margin-right: 0;
+    }
+    .footer {
+        &__center {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        &__link-tel {
+            margin-bottom: 8px;
+        }
     }
 }
 
@@ -39,6 +61,9 @@
     .call-btn {
         padding: 18px 40px;
     }
+    .footer .call-btn {
+        min-width: 213px;
+    }
     h1 {
         font-size: 84px;
         line-height: 84px;
@@ -54,6 +79,18 @@
     .header-slider {
         &__btnnext {
             right: 8.01vw;
+        }
+    }
+    .about-us {
+        &__item-text {
+            margin: 0 30px;
+        }
+    }
+    .partners {
+        &__item-img {
+            img {
+                max-width: 265px;
+            }
         }
     }
 }
@@ -104,12 +141,59 @@
         font-size: 28px;
         line-height: 36px;
     }
+    .contacts-box {
+        margin-right: 50px;
+    }
+    .about-us {
+        &__item-text {
+            margin: 0 20px;
+        }
+    }
+    .partners {
+        &__item {
+            padding: 0 10px;
+            min-height: 200px;
+        }
+        &__item-img {
+            img {
+                max-width: 215px;
+            }
+        }
+    }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1220px) {
     .header-slider {
         &__btnnext {
             right: 7.01vw;
+        }
+    }
+    .footer {
+        .confidentiality {
+            min-width: 180px;
+        }
+        &__right {
+            flex-wrap: wrap;
+        }
+        &__center {
+            margin-right: 0;
+        }
+        &__link-vk {
+            margin-bottom: 20px;
+        }
+    }
+    .about-us {
+        &__item {
+            min-height: 230px;
+        }
+    }
+    .partners {
+        &__wrapper {
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        &__item+&__item {
+            margin-left: 0;
         }
     }
 }
@@ -124,6 +208,11 @@
     }
     .call-btn {
         padding: 12px 30px;
+    }
+    .footer {
+        .call-btn {
+            min-width: 193px;
+        }
     }
     .header {
         .logo {
@@ -147,6 +236,81 @@
     }
 }
 
+@media (max-width: 1024px) {
+    .about-us {
+        &__wrapper {
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        &__item+&__item {
+            margin-left: 0;
+        }
+        &__wrapper-2 {
+            .about-us__item:nth-child(n+2) {
+                display: none;
+            }
+        }
+    }
+    .page-404 {
+        .logo {
+            padding-top: 30px;
+            margin-bottom: 60px;
+        }
+        &__title {
+            font-size: 260px;
+            line-height: 260px;
+        }
+    }
+    .catalog {
+        &__item-drop {
+            font-size: 26px;
+            line-height: 30px;
+            padding: 20px 0;
+        }
+        &__item-drop::before {
+            width: 30px;
+            top: 36px;
+        }
+        &__item-drop::after {
+            width: 30px;
+            top: 36px;
+        }
+    }
+    .catalog-item {
+        &__content {
+            margin-bottom: 40px;
+        }
+        &__content-box {
+            margin-bottom: 25px;
+        }
+    }
+}
+
+@media (max-width: 955px) {
+    .footer {
+        &__inner {
+            flex-wrap: wrap;
+        }
+        &__center {
+            justify-content: flex-start;
+            margin-bottom: 30px;
+        }
+        &__right {
+            max-width: 120px;
+            margin-bottom: 20px;
+        }
+        &__link-tel {
+            margin-bottom: 0;
+        }
+        &__link-vk {
+            margin-bottom: 0;
+        }
+        .call-btn {
+            margin-bottom: 30px;
+        }
+    }
+}
+
 @media (max-width: 900px) {
     .header {
         &__menu {
@@ -159,6 +323,23 @@
     .header-slider {
         &__btnnext {
             right: 5.01vw;
+        }
+    }
+    .contacts__wrapper {
+        display: block;
+    }
+    .contacts-box {
+        margin-right: 20px;
+        margin-bottom: 64px;
+    }
+    .about-us {
+        &__item {
+            max-width: 334px;
+        }
+    }
+    .partners {
+        &__item {
+            max-width: 334px;
         }
     }
 }
@@ -179,6 +360,75 @@
         }
         &__item-text p+p {
             margin-left: 30px;
+        }
+    }
+    .footer {
+        &__center {
+            max-width: 480px;
+        }
+    }
+    #success-modal {
+        padding: 50px;
+        .close-modal {
+            top: 25px;
+            right: 25px;
+        }
+        .success-modal__text {
+            margin-bottom: 30px;
+        }
+    }
+    #call-me-modal {
+        padding: 50px;
+        .close-modal {
+            top: 25px;
+            right: 25px;
+        }
+        .contact-us__text {
+            margin-bottom: 30px;
+        }
+    }
+    .about-us {
+        &__item {
+            max-width: 264px;
+            min-width: 200px;
+        }
+    }
+    .partners {
+        &__item {
+            max-width: 284px;
+        }
+    }
+    .page-404 {
+        &__title {
+            font-size: 200px;
+            line-height: 200px;
+        }
+    }
+    .catalog {
+        &-list {
+            max-width: 792px;
+            margin-right: 30px;
+        }
+        &__item-drop {
+            font-size: 22px;
+            line-height: 26px;
+            padding: 15px 0;
+        }
+        &__item-drop::before {
+            width: 25px;
+            top: 28px;
+        }
+        &__item-drop::after {
+            width: 25px;
+            top: 28px;
+        }
+    }
+    .catalog-item {
+        &__content {
+            margin-bottom: 30px;
+        }
+        &__content-box {
+            margin-bottom: 20px;
         }
     }
 }
@@ -224,6 +474,45 @@
             right: 22px;
         }
     }
+    .contacts {
+        &__inner {
+            padding-bottom: 64px;
+        }
+        &__title {
+            margin-bottom: 32px;
+        }
+        &__form-title {
+            margin-bottom: 24px;
+        }
+    }
+    .contacts-box {
+        margin-right: 0;
+        margin-bottom: 32px;
+        &__contacts,
+        &__social {
+            padding: 20px;
+        }
+    }
+    .footer {
+        &__center {
+            max-width: 300px;
+        }
+    }
+    .about-us {
+        &__item {
+            max-width: 234px;
+        }
+    }
+    .partners {
+        &__item {
+            max-width: 240px;
+        }
+    }
+    .catalog {
+        &-list {
+            max-width: 265px;
+        }
+    }
 }
 
 @media (max-width: 600px) {
@@ -241,10 +530,17 @@
         &__menu {
             background: rgba(0, 0, 0, 0.9);
             padding: 0 50px 20px 40px;
-            top: 141px;
+            top: 151px;
         }
         &__menu-list {
             display: block;
+        }
+        &__menu-item {
+            margin: 10px 0;
+            a {
+                padding: 20px 0 8px;
+                display: block;
+            }
         }
         &__menu-item+&__menu-item {
             margin-left: 0;
@@ -270,15 +566,48 @@
         font-size: 23px;
         line-height: 29px;
     }
+    .about-us {
+        &__wrapper {
+            justify-content: center;
+        }
+        &__wrapper-2 {
+            display: none;
+        }
+        &__item {
+            max-width: 340px;
+            min-height: 170px;
+        }
+    }
+    .partners {
+        &__item {
+            max-width: 220px;
+            min-height: 180px;
+        }
+        &__item-img img {
+            max-width: 190px;
+        }
+    }
+    .page-404 {
+        &__title {
+            font-size: 170px;
+            line-height: 170px;
+        }
+    }
+    .catalog {
+        &__wrapper {
+            display: block;
+        }
+        &-list {
+            max-width: 560px;
+            margin-bottom: 30px;
+        }
+    }
 }
 
 @media (max-width: 500px) {
     .header {
-        &__left {
-            margin-bottom: 10px;
-        }
         &__menu {
-            top: 127px;
+            top: 147px;
         }
     }
     .header-slider {
@@ -329,6 +658,48 @@
     .call-btn {
         padding: 10px 20px;
     }
+    .footer {
+        &__center {
+            max-width: 220px;
+        }
+        .call-btn {
+            min-width: 183px;
+        }
+    }
+    .contacts__inner {
+        padding-bottom: 32px;
+    }
+    #success-modal {
+        .close-modal {
+            top: 15px;
+            right: 15px;
+        }
+    }
+    #call-me-modal {
+        .close-modal {
+            top: 15px;
+            right: 15px;
+        }
+    }
+    .about-us {
+        &__item {
+            min-height: 160px;
+        }
+    }
+    .partners {
+        &__wrapper {
+            justify-content: center;
+        }
+        &__item {
+            max-width: 250px;
+        }
+    }
+    .page-404 {
+        &__title {
+            font-size: 140px;
+            line-height: 140px;
+        }
+    }
 }
 
 @media (max-width: 450px) {
@@ -359,6 +730,11 @@
         font-size: 14px;
         line-height: 16px;
     }
+    .header {
+        &__menu {
+            top: 130px;
+        }
+    }
     .header-slider {
         &__item-text {
             margin-bottom: 30px;
@@ -384,5 +760,40 @@
     h3 {
         font-size: 18px;
         line-height: 20px;
+    }
+    .footer {
+        &__left {
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+        &__link-tel {
+            margin-bottom: 20px;
+        }
+        &__link-tel::before {
+            top: -5px;
+        }
+        &__link-email::before {
+            top: 0;
+        }
+        &__right {
+            max-width: 60px;
+        }
+        &__link-vk {
+            margin-bottom: 15px;
+        }
+        .call-btn {
+            min-width: 157px;
+        }
+    }
+    .catalog {
+        &__item-drop {
+            font-size: 18px;
+        }
+        &__item-drop::before {
+            width: 20px;
+        }
+        &__item-drop::after {
+            width: 20px;
+        }
     }
 }
