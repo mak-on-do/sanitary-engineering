@@ -1,48 +1,9 @@
   @import 'global';
-  #button {
-      position: fixed;
-      bottom: 185px;
-      right: 156px;
-      transition: background-color .3s, opacity .5s, visibility .5s;
-      opacity: 0;
-      visibility: hidden;
-      z-index: 1000;
-      padding: 29px 24px 35px;
-      border: 1px solid #fff;
-      width: 80px;
-      height: 80px;
-      &::after {
-          content: '';
-          background-image: url(../images/arrow-up.svg);
-          svg {
-              fill: none;
-              stroke: #fff;
-          }
-      }
-      &.show {
-          opacity: 1;
-          visibility: visible;
-      }
-      &:hover {
-          cursor: pointer;
-          background-color: #fff;
-          svg {
-              fill: none;
-              stroke: #000;
-          }
-      }
-  }
-  
-  #button.show {
-      opacity: 1;
-      visibility: visible;
-  }
-  
   .header-slider {
       &__item {
-          background-position: center;
-          background-size: cover;
-          background-repeat: no-repeat;
+          //   background-position: center;
+          //   background-size: cover;
+          //   background-repeat: no-repeat;
           height: 100vh;
       }
       &__item-bg1 {
@@ -66,6 +27,7 @@
       &__item-inner {
           display: flex;
           justify-content: space-between;
+          position: relative;
       }
       &__item-box {
           padding-top: 264px;
@@ -85,7 +47,9 @@
           }
       }
       &__item-indicator {
-          padding-top: 78.888vh;
+          position: absolute;
+          top: 105%;
+          right: 0;
           display: flex;
       }
       &__item-amount {
@@ -111,7 +75,7 @@
       }
       &__btn {
           position: absolute;
-          top: 88.5%;
+          top: 86%;
           background: transparent;
           outline: none;
           padding: 0;
@@ -156,26 +120,30 @@
       &__descr {
           margin-top: 152px;
           max-width: 520px;
-          margin-right: 160px;
+          margin-right: 20px;
       }
       &__descr-title {
           margin-bottom: 60px;
       }
       &__img {
-          max-width: 520px;
-          height: 552px;
           margin-right: 24px;
-          border: 1px solid #fff;
+          source,
+          img {
+              max-width: 520px;
+              width: 100%;
+              min-height: 552px;
+          }
       }
-      &__box {
+      &__item {
           padding: 48px 48px 56px;
           border: 1px solid #fff;
           max-width: 384px;
+          min-height: 264px;
           &+& {
               margin-top: 24px;
           }
       }
-      &__box-title {
+      &__item-title {
           margin-bottom: 16px;
       }
   }
@@ -193,13 +161,32 @@
       &__content-bottom {
           display: flex;
           flex-direction: row-reverse;
+          justify-content: center;
       }
       &__content-top {
           margin-bottom: 12px;
+          position: relative;
+          .our-production__box:nth-child(-n+3) {
+              border: 1px solid transparent;
+          }
+          .our-production__box:nth-child(4) {
+              display: none;
+          }
+          .our-production__box:nth-child(6) {
+              display: none;
+          }
+      }
+      &__box-title {
+          position: absolute;
+          top: 0;
+          right: 0;
+          margin-left: 12px;
+          max-width: 636px;
+          width: 100%;
       }
       &__title {
           margin-top: 64px;
-          margin-left: 116px;
+          margin-left: 104px;
       }
       &__box {
           border: 1px solid #fff;
@@ -217,7 +204,7 @@
           img {
               max-width: 312px;
               width: 100%;
-              height: 312px;
+              min-height: 312px;
               transition: all .3s;
           }
           &:hover {
@@ -241,6 +228,7 @@
       background-size: cover;
       background-repeat: no-repeat;
       height: 100vh;
+      position: relative;
       &__bg {
           position: absolute;
           right: 0;
@@ -271,6 +259,7 @@
           background-image: url(../images/quotes.svg);
           background-position: 93% 80%;
           background-repeat: no-repeat;
+          background-size: 20% 35%;
       }
       &__item-title {
           display: flex;
@@ -320,9 +309,10 @@
               stroke: #fff;
               fill: none;
           }
-          transition: all .3s;
+          transition: box-shadow 300ms ease-in-out,
+          color 300ms ease-in-out;
           &:hover {
-              background: #fff;
+              box-shadow: 0 0 40px 40px #fff inset;
               svg {
                   stroke: #000;
                   fill: none;
@@ -340,6 +330,32 @@
       &__btnnext {
           padding: 28px 32px 28px 38px;
           right: -114px;
+      }
+      .slick-dots {
+          position: absolute;
+          bottom: -40px;
+          left: 0;
+          right: 0;
+          margin: 0 auto;
+          text-align: center;
+          li {
+              display: inline-block;
+              padding: 0 5px;
+              &.slick-active button {
+                  background-color: #fff;
+              }
+          }
+          button {
+              padding: 0;
+              margin: 0;
+              font-size: 0;
+              width: 11px;
+              height: 11px;
+              border: 1px solid #fff;
+              border-radius: 50%;
+              background-color: transparent;
+              outline: none;
+          }
       }
   }
   
@@ -504,6 +520,9 @@
               margin-bottom: 0;
           }
       }
+      .contact-us__form {
+          margin-right: 0;
+      }
       .contact-us__form-box:nth-child(2) {
           margin-bottom: 0;
       }
@@ -584,47 +603,6 @@
       }
   }
   
-  .about-us {
-      background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/partners-bg.jpg');
-      background-position: center;
-      background-size: cover;
-      background-repeat: no-repeat;
-      &__inner-page {
-          padding-top: 164px;
-          padding-bottom: 131px;
-      }
-      &__title {
-          margin-bottom: 64px;
-      }
-      &__wrapper {
-          display: flex;
-      }
-      &__item {
-          max-width: 384px;
-          width: 100%;
-          min-height: 264px;
-          border: 1px solid #fff;
-          display: flex;
-          flex-direction: column;
-          text-align: center;
-          justify-content: space-evenly;
-          margin-bottom: 24px;
-          transition: all .3s;
-      }
-      &__item+&__item {
-          margin-left: 24px;
-      }
-      &__item:hover {
-          background: rgba(#fff, .6);
-          .partners__item-title {
-              color: #333;
-          }
-      }
-      &__item-text {
-          margin: 0 48px;
-      }
-  }
-  
   .contacts {
       background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/contacts-bg.jpg');
       background-position: center;
@@ -632,13 +610,14 @@
       background-repeat: no-repeat;
       &__inner {
           padding-top: 164px;
-          padding-bottom: 131px;
+          padding-bottom: 94px;
       }
       &__title {
           margin-bottom: 64px;
       }
       &__wrapper {
           display: flex;
+          margin-bottom: 131px;
       }
       &__form {
           max-width: 620px;
@@ -646,6 +625,69 @@
       }
       &__form-title {
           margin-bottom: 48px;
+      }
+      .advantages {
+          &__wrapper {
+              display: flex;
+          }
+          &__item {
+              position: relative;
+              max-width: 384px;
+              width: 100%;
+              min-height: 264px;
+              border: 1px solid #fff;
+              transition: all .3s;
+              text-align: center;
+              svg {
+                  fill: none;
+                  stroke: #fff;
+                  opacity: 0.1;
+                  margin-top: 48px;
+              }
+          }
+          &__item-1 {
+              svg {
+                  max-width: 234px;
+                  width: 100%;
+              }
+          }
+          &__item-2 {
+              margin-left: 24px;
+              svg {
+                  max-width: 281px;
+                  width: 100%;
+              }
+          }
+          &__item-3 {
+              margin-left: 24px;
+              svg {
+                  max-width: 288px;
+                  width: 100%;
+              }
+          }
+          &__item-4 {
+              margin-left: 24px;
+              svg {
+                  max-width: 294px;
+                  width: 100%;
+              }
+          }
+          &__item:hover {
+              background: rgba(#fff, .6);
+              svg {
+                  opacity: 0.7;
+              }
+              .advantages__item-text {
+                  color: #333;
+              }
+          }
+          &__item-text {
+              position: absolute;
+              left: 48px;
+              bottom: 50px;
+              max-width: 210px;
+              text-align: left;
+          }
       }
   }
   

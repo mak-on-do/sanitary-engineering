@@ -168,9 +168,9 @@ body {
     color: #fff;
     cursor: pointer;
     outline: none;
-    transition: all .3s;
+    transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
     &:hover {
-        background: #fff;
+        box-shadow: 0 0 40px 40px #fff inset;
         color: #000;
     }
 }

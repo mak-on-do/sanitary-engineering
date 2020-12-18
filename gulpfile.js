@@ -44,7 +44,9 @@ function jslibs() {
             'node_modules/slick-carousel/slick/slick.js',
             'node_modules/magnific-popup/dist/jquery.magnific-popup.js',
             'node_modules/fullpage.js/dist/fullpage.js',
-            'app/js/jquery.formstyler.js'
+            'node_modules/fullpage.js//vendors/scrolloverflow.js',
+            'app/js/jquery.formstyler.js',
+            'app/js/jquery.maskedinput.js'
         ])
         .pipe(concat('libs.min.js'))
         .pipe(uglify())
